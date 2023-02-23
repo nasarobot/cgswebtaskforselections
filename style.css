@@ -1,0 +1,276 @@
+html,body{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*-----navigation bar-------*/
+
+.nav-bar{
+    width: 100%;
+    top:0;
+    display:inline-block;
+    position: fixed ;
+    z-index: 2;
+    background: #de1d57;
+}
+
+.nav-bar img{
+    height: 60px;
+    float:left;
+}
+.nav-links{
+    
+    padding: 5px 0;
+}
+
+.nav-links ul{
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    float:right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+
+.nav-links ul li a{
+    color:#cfe374;
+    font-size: 1em;
+    line-height: 1em;
+    padding:15px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display:inline-block;
+    transition:0.3s
+}
+.nav-links ul li a.active{
+    background: #2e3316;
+}
+.nav-links ul li:hover a {
+    background-color: #cfe374;
+    color: #de1d57;
+}
+
+/*-----------some general codes---------*/
+
+.section{
+    position: relative;
+    max-width: 100%;
+}
+
+.container{
+    margin:0;
+    padding: 0.4em 1em;
+}
+
+.heading{
+    font-size: 3em;
+    color: #1bc5db;
+    text-align: center;
+    transform: translate(0,20%);
+}
+
+.flexing{
+    display :flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content:space-evenly;
+}
+
+
+
+/*--------home----------*/
+
+.para{
+    max-width: 50%;
+    padding: 30px;
+    font-size: 1.4rem;
+    color: rgb(205, 204, 201);
+}
+.photo img{
+    padding: 40px;
+    max-width: 36rem;
+    max-height: 18rem;
+    overflow: hidden;
+    border-radius: 10vh;
+}
+
+#home{
+    background-image: linear-gradient(rgba(88, 20, 143,0.4),rgba(88, 20, 143,0.9)),url("./pictures/home_background.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 60px;
+}
+
+/*---------about us------*/
+
+#about-us .container img{
+    align-items: center;
+}
+h4{
+    color: #ea761e;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.box{
+
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    text-align: center;
+    align-items: center;
+}
+.box img{
+    max-width: 80%;
+    padding:2%;
+}
+.achievements p{
+    text-align: center;
+    color: #ea761e;
+    font-weight: 600;
+}
+.achievements p1{
+    color: #e5b506;
+    font-size: larger;
+}
+.reviews h6{
+    font-size: 2rem;
+    text-align: center;
+    color: #de1d57;
+}
+.reviews .flexing{
+    align-items: center;
+    justify-content: center;
+}
+.box2{
+    margin: 10px 30px;
+    width: 40%;
+    min-width: 12rem;
+    padding:1rem;
+    background-color: #fce9ef;
+    border: #d16c8b;
+    border-radius: 5vh;
+}
+.box2 .flexing{
+    align-items: start;
+    text-align: left;
+    justify-content: left;
+
+}
+.box2 .flexing img{
+    max-width: 1.6rem;
+}
+.box2 .flexing .profile{
+    max-width: 4rem;
+    padding: 0 0.2rem;
+    border-radius: 50vh;
+}
+.box2 .flexing b{
+    padding: 0.5rem;
+}
+.box2 .flexing p{
+    padding:0.8rem;
+}
+
+/*-------------Tours-----------*/
+
+.card{
+    width: 20rem;
+    margin: 1rem;
+    border-radius: 2vh;
+    background-color: #fce9ef;
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+.place{
+    width:100%;
+    height:30vh;
+    overflow: hidden;
+}
+.place img{
+    width:100%;
+}
+.card b{
+    font-size: 1.3rem;
+}
+.card p{
+    padding: 0.5rem;
+}
+.layer :hover{
+    background-color: rgba(219, 51, 155, 0.4);
+    transition: 0.3s;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+
+/*-----------Contact Us------------*/
+#contact-us p{
+    font-size: large;
+    text-align: center;
+}
+#contact-us p a img{
+    width: 70px;
+}
+
+/*--------footer---------*/
+#footer a img{
+    margin: 1rem;
+    width:50px;
+}
+#footer .flexing{
+    justify-content: center;
+}
+.top{
+    text-align: center;
+    font-size: medium;
+}
+#footer{
+    text-align: center;
+}
+
+
+.burger{
+    float: right;
+    display: none;
+}
+@media(max-width:700px){
+    .burger{
+        display:block;
+        z-index: 2;
+    }
+    .nav-links{
+        top:60px;
+    }
+    .nav-links ul{
+        display: grid;
+        text-align: center;
+        width: 100%;
+        /* transform: translateY(-100%); */
+
+    }
+    .nav-links ul li{
+        padding:10px;
+    }
+    .para{
+        max-width: 80%;
+    }
+    .box2{
+        width:70%
+    }
+    #toggle:checked .nav-links ul{
+        transform: translateY(0);
+    }
+}
+input{
+    display: none;
+}
